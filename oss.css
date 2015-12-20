@@ -1,0 +1,31 @@
+.oss-grey { color: grey }
+.oss-grey a:hover { color: black }
+
+.oss-jumbo {
+	margin-right: 20em;
+	margin-top: 2em;
+	background: white;
+	background-color: rgba(255, 255, 255, 0.666);
+	padding: 1em 2em;
+}
+
+.oss-bg {
+	/* Source: https://sh.wikipedia.org/wiki/Bratislava#/media/File:BratislavaNight.jpg */
+	background-image: url('BratislavaNight.jpg');
+	background-position: 0px -100px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.oss-jumbo {
+		padding: 8px !important;
+		margin: 8px !important;
+	}
+
+	.oss-bg {
+		padding: 8px !important;
+		margin: 0px !important;
+		background-position: 0px 0px;
+	}
+
+}
