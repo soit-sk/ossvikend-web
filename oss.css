@@ -12,7 +12,12 @@
 .oss-bg {
 	/* Source: https://sh.wikipedia.org/wiki/Bratislava#/media/File:BratislavaNight.jpg */
 	background-image: url('BratislavaNight.jpg');
+	background-repeat: no-repeat;
 	background-position: 0px -100px;
+}
+
+* {
+	max-width: 1500px;
 }
 
 @media only screen and (max-width: 1000px) {
