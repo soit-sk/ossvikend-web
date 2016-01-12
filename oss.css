@@ -1,5 +1,7 @@
 .oss-grey { color: grey }
-.oss-grey a:hover { color: black }
+
+.oss-menu { color: black }
+.oss-menu a:hover { color: grey }
 
 .oss-jumbo {
 	margin-right: 20em;
