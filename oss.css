@@ -1,3 +1,8 @@
+.oss-main {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
 .oss-grey { color: grey }
 
 .oss-menu { color: black }
@@ -16,10 +21,6 @@
 	background-image: url('BratislavaNight.jpg');
 	background-repeat: no-repeat;
 	background-position: 0px -100px;
-}
-
-* {
-	max-width: 1500px;
 }
 
 @media only screen and (max-width: 1000px) {
