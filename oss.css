@@ -5,7 +5,7 @@
 
 .oss-grey { color: grey }
 
-.oss-menu { color: black }
+.oss-menu a { color: black }
 .oss-menu a:hover { color: grey }
 
 .oss-jumbo {
@@ -22,6 +22,8 @@
 	background-repeat: no-repeat;
 	background-position: 0px -100px;
 }
+
+a { color: blue }
 
 @media only screen and (max-width: 1000px) {
 
