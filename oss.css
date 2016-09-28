@@ -24,6 +24,7 @@
 }
 
 a { color: blue }
+img{margin:0em 30px}
 
 @media only screen and (max-width: 1000px) {
 
