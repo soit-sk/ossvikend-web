@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 
-	<title>OSS Víkend Košice | Pre návštevníkov</title>
+	<title>OSS Víkend Bratislava | Pre návštevníkov</title>
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="oss.css">
 </head>
@@ -14,13 +14,15 @@
     <nav class="w3-topnav w3-light-white w3-right-align w3-padding-right oss-menu">
         <a href="index.html">OSS Víkend</a>
     <!--
-	<a href="cfp.html">CFP</a>
-    -->
         <a href="schedule.html">Program</a>
         <a href="presenters.html">Prednášajúci</a>
+    -->
         <a href="visitors.html">Pre návštevníkov</a>
-<!--        <a href="feedback.html">Feedback</a>  -->
+	    <a href="cfp.html">Prihlásiť prednášku</a>
+    <!--
+        <a href="feedback.html">Feedback</a>
         <a href="thanks.html">Ďakujeme</a>
+    -->
         <a href="archive.html">Archív</a>
     </nav>
 
@@ -28,18 +30,23 @@
         <div class="w3-twothird">
             <div class="w3-padding">
             <h4>Ako sa na OSS Víkend dostať?</h4>
-            <p>Ak pricestujete vlakom alebo autobusom, doveziete sa zo zastáky
-            <a href="https://imhd.sk/ke/cestovny-poriadok/zastavka/1626">Staničné námestie</a>
-            na zastávku
-            <a href="https://imhd.sk/ke/cestovny-poriadok/zastavka/1571">Zimná</a>.<br>
-            <a href="http://www.dpmk.sk/">DPMK</a><br>
-            <a href="https://imhd.sk/ke/planovac-cesty-vyhladanie-spojenia">imhd.sk/ke</a></p>
+            <p>Električkou alebo autobusom sa doveziete na zastávku
+            <a href="http://imhd.sk/ba/cestovny-poriadok/zastavka/125/Botanicka-zahrada">Botanická Záhrada</a>.
+            Potom sledujte značky so šípkami, zavedú vás až k pavilónu fyziky.</p>
+            <p>Z hlavnej stanice ide priamo spoj č.
+            <a href="http://imhd.sk/ba/cestovny-poriadok/linka/32/smer/Dlhe-diely-Kuklovska/zastavka/Hlavna-stanica/95276">32</a>
+            a je typicky lepšia voľba než Taxi. Stačí vám 0,70 € lístok.</p>
+            <p><a href="http://www.soit.sk/media/a501/image/file/2/0001/yiTY.mapa_png.png">Mapa - cesta od MHD</a><br>
+            <a href="http://www.soit.sk/media/a501/image/file/2/0000/xCYf.mapavelka_png.png">Mapa - prístup autom</a></p>
 
             <h4>Kde sa najem?</h4>
+            <p>Počas podujatia máme zajednaný bufet priamo v pavilóne fyziky.</p>
             <p>Reštaurácie v okolí:<br>
-            <a href="http://www.resport.szm.com/">Sport</a><br>
-            <a href="http://tobi-restauracia.sk/">TOBI</a><br>
-            <a href="https://www.facebook.com/pages/Mango-Bistro/766931380026588">Bistro Mango</a><br>
+            <a href="http://www.restauracia-drag.sk/">Reštaurácia Drag</a> 4 min pešo<br>
+            <a href="http://restaurantriviera.sk/">Reštaurácia Riviéra</a> 13 min pešo<br>
+            <a href="https://www.zomato.com/cs/bratislava/pizzeria-kamel-karlova-ves-bratislava-iv">Pizzeria Kamel</a> 11 min pešo<br>
+            <a href="http://www.druzbacatering.sk/">Družba catering</a> 14 min pešo<br>
+            <a href="http://www.restauraciaidyla.sk/idylamd/mdkontakt.html">Idyla Cafe & Restaurant</a> 16 min pešo
             </p>
 
             <h4>O SOIT</h4>
@@ -54,9 +61,9 @@
         <div class="w3-third">
             <div class="w3-card-4 w3-padding w3-margin">
             <p class="w3-large">
-                PF UPJŠ, Park Angelinum 9<br>
-                vstup z ulice Jesenná 5<br>
-                Košice
+                FMFI UK, pavilón fyziky<br>
+                Mlynská dolina 6280<br>
+                Bratislava
             </p>
 
             <div id="map" style="height:333px"></div>
@@ -75,7 +82,7 @@
 	map = new OpenLayers.Map("map");
 	map.addLayer(new OpenLayers.Layer.OSM());
 
-	var lonLat = new OpenLayers.LonLat(21.24813,48.72891).transform(
+	var lonLat = new OpenLayers.LonLat(17.07013,48.15116).transform(
 		new OpenLayers.Projection("EPSG:4326"),	// transform from WGS 1984
 		map.getProjectionObject()		// to Spherical Mercator Projection
 	);
