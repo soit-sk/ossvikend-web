@@ -1,0 +1,98 @@
+ <!DOCTYPE html>
+<html lang="sk-SK">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<title>OSS Víkend | Sprievodné akcie a stánky</title>
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="oss.css">
+</head>
+<script src="lib/w3.js"></script>
+<body>
+<div w3-include-html="oss_nav.html"></div> 
+<script> w3.includeHTML(); </script>
+<div w3-include-html="oss_title.html"></div> 
+<script> w3.includeHTML(); </script>
+<div class="oss-main">
+    <div class="w3-content">
+	    <br />
+<h3>PGP Key Signing Party</h3>
+
+<p>Termín: Sobota 17.  3. od 13:00, místost bude upřesněna</p>
+<p>Určitě jste se již setkali s PGP <a href="https://cs.wikipedia.org/wiki/Pretty_Good_Privacy">Pretty Good Privacy</a> standardem. Podepisujete své emaily, commity v GITu, šifrujete svoji Jabber komunikaci? Přinejmenším Váš systém kontroluje zda balíčky které se chystáte instalovat mají validní podpis.</p>
+<p>Přemýšleli jste ale nad tím jak ověřit veřejný klíč protistrany, případně jak bezpečně předat svůj klíč ostatním? Místo pochybných certifikačních ‘autorit’ si lidé v open source světě důvěřují navzájem a vzniká tzv. <a href="https://cs.wikipedia.org/wiki/S%C3%AD%C5%A5_d%C5%AFv%C4%9Bry">síť důvěry</a>.</p>
+<p>Podepsáním veřejné části cizího klíče dáte najevo, že jeho majiteli opravdu věříte - že jste si stoprocentně jisti jeho totožností.  Stačí si s kamarády vyměnit otisky veřejných klíčů, porovnat je s těmi z internetu (key serveru), navzájem podepsat a uploadovat / odeslat zpět majiteli. Postupem času takhle sbíráte podpisy a Váš klíč (vy) <b>nabývá na důvěryhodnosti</b>.</p>
+
+
+<p style="border:1px; border-style:solid; border-color:#00aa00; padding: 3px;">Pojďme se na OSS víkedu potkat, prokázat si navzájem naše identity - občanský/řidičský průkaz, pas, či jiný doklad s fotografií a alespoň nějakou ochranou budou snad každému stačit. Dále si přineste malé papírky se jménem a otiskem veřejné části svého klíče aby celý proces proběhl co možná nejjednodušeji.</p>
+
+
+<p><b>Jak postupovat před samotnou párty?</b></p>
+<ol>
+	<li/>
+Používejte identifikátor klíče v dlouhém formátu (<a href="https://evil32.com/">důvod</a>)<br/> Do souboru ~/.gnupg/gpg.conf přidejte řádek<br/> keyid-format 0xlong
+		
+	<li/>
+Pokud ještě klíč nemáte, vytvořte si jej<br/>
+$ gpg
+	--gen-key<br/>
+Použijte RSA o délce 4096 bitů.<br/>
+Pokud ztratíte soukromou část klíče nelze jej už zrušit.<br/>
+Blíží-li se datum expirace můžete platnost klíče prodloužit.
+		
+	<li/>
+Zjistěte ID svého klíče<br/>
+$ gpg --list-secret-keys | grep sec<br/>
+Řetězec, který hledáte, vypadá nějak takhle: 0x65BDCDAB70974BA9 
+	<li/>
+Uploadujte veřejnou část svého klíče na key server<br/>
+$ gpg --keyserver
+	<a href="http://pool.sks-keyservers.net/">pool.sks-keyservers.net</a>
+	--send-key 0x65BDCDAB70974BA9 
+	
+	<li/>
+Vygenerujte si fingerprint se svým jménem a otiskem veřejné části klíče<br/>
+$
+	gpg --fingerprint 0x65BDCDAB70974BA9 
+	
+	<li/>
+Vytiskněte tento fingerprint v dostatečném počtu, nastříhejte na proužky a vezměte ssebou 
+	
+</ol>
+<b>Jak postupovat doma po OSS víkedu?</b>
+<ol>
+	<li/>
+Stáhněte si z keyserveru veřejnou část klíče svého protějška<br/>
+$
+	gpg --keyserver <a href="http://pool.sks-keyservers.net/">pool.sks-keyservers.net</a>
+	--recv-keys 0xE79C9E1903ADD68E 
+	
+	<li/>
+Podepište veřejnou část staženého klíče<br/>
+$ gpg --edit-key
+	0xE79C9E1903ADD68E<br/>
+Příkazem fpr zkontrolujte zda se fingerprint shoduje<br/>
+Příkazem sign přidejte svůj podpis<br/>
+Příkazem check zkontrolujte zda je mezi podpisy i ten váš<br/>
+Příkazem quit ukončete interaktivní režim 
+	<li/>
+Uploadujte klíč zpět na keyserver<br/>
+$ gpg --keyserver
+	<a href="http://pool.sks-keyservers.net/">pool.sks-keyservers.net</a>
+	--send-keys 0xE79C9E1903ADD68E 
+	
+</ol>
+
+<p>V každém případě se na nás neváhejte obrátit!<br/> Ideálně by všichni měli mít hotovo do <b>31. 6.</b></p>
+Děkujeme!
+<!--p> Pavel Dostál</p>
+<p><a href="https://ftp.sh.cvut.cz/">https://ftp.sh.cvut.cz/</a></p>
+<p><a href="https://git.sh.cvut.cz/">https://git.sh</p-->
+	    
+    </div>
+</div>
+
+</body>
+</html>
+
