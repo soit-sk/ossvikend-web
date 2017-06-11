@@ -26,6 +26,10 @@
 a { color: blue }
 img{margin:0em 30px}
 
+td, th {
+    border: 0px solid black;
+}
+
 @media only screen and (max-width: 1000px) {
 
 	.oss-jumbo {
