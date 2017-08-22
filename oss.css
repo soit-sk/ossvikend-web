@@ -1,3 +1,8 @@
+body {
+	background-color: white;
+	color: black;
+}
+
 .oss-main {
     margin: 0 auto;
     max-width: 1500px;
@@ -18,9 +23,12 @@
 
 .oss-bg {
     /* Source: https://sh.wikipedia.org/wiki/Bratislava#/media/File:BratislavaNight.jpg */
-    background-image: url('BratislavaNight.jpg');
+    /*background-image: url('BratislavaNight.jpg');*/
+    /* Source: https://upload.wikimedia.org/wikipedia/commons/7/75/Kosice_-_St._Elisabeth_Cathedral_retouched.jpg */
+    background-image: url('Kosice.jpg');
 	background-repeat: no-repeat;
-	background-position: 0px -100px;
+	background-position: 0px -50px;
+	background-size: 1400px 500px;
 }
 
 a { color: blue }
