@@ -1,73 +1,54 @@
 <!DOCTYPE html>
 <html lang="sk">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta charset="utf-8" />
-	<title>OSS víkend | CFP</title>
-	<link rel="stylesheet" href="w3.css">
-	<link rel="stylesheet" href="oss.css">
-</head>
-<body>
-<div class="oss-main">
-    <nav class="w3-topnav w3-light-white w3-right-align w3-padding-right oss-menu">
-        <a href="index.html">OSS víkend</a>
-    <!--
-        <a href="schedule.html">Program</a>
-        <a href="presenters.html">Prednášajúci</a>
-    -->
-        <a href="visitors.html">Pre návštevníkov</a>
-        <a href="cfp.html">Prihlásiť prednášku</a>
-    <!--
-        <a href="thanks.html">Ďakujeme</a>
-    -->
-        <a href="archive.html">Archív</a>
-    </nav>
-
-    <div class="w3-content">
-        <div class="w3-padding">
-        <h2>Prednášky pre OSS víkend Košice, 20.10.2018 – 21.10.2018</h2>
-<p>Všetky prednášky a workshopy z oblasti otvorených technológií sú vítané. Hľadáme najmä:</p>
-<ul>
-<li>Prednášky od členov tímov OSS projektov, prispievateľov do projektov alebo iných ľudí, ktorí sa priamo zúčastňujú na vývoji a použití otvorených technológií.</li>
-<li>Praktické prednášky (tutoriály) o používaní otvorených technológií.</li>
-<li>Akékoľvek iné prednášky, ktoré sa týkajú slobodného softvéru, hardvéru, otvorených dát, štandardov a maker community.</li>
-</ul>
-<p>Pre ľahšie zostavenie programu navrhujeme dĺžku prednášok <strong>30 alebo 60 minút (vrátane diskusie).</strong>.</p>
-<p>
-Návrhy na prednášky posielajte do <strong>30.09.2018</strong>.<br>
-Na e-mail <strong>ossvikend {[kysla-rybicka]} soit.sk</strong>
-uveďte prosím:
-<strong><ul>
-<li>Meno:</li>
-<li>Názov prednášky/workshopu:</li>
-<li>Krátky abstrakt (3-4 vety):</li>
-<li>Dĺžka trvania prednášky: 30 min / 60 min</li>
-<li>preferovaný deň (sobota, nedeľa) a čas:</strong></li>
-<li><strong>veľkosť trička </strong></li>
-<li><strong>Záujem o zabezpečenie ubytovania</strong> (z piatka na sobotu / zo soboty na nedeľu).</li>
-
-</ul>
-Nepovinne:
-<ul>
-		<li><strong>V prípade workshopu požiadavky na účastníkov:</strong></li>
-		<li><strong>Fotografia</strong> (pre stránku o prednášajúcich): </li>
-		<li><strong>Krátky životopis </strong>(pre stránku o prednášajúcich):</li>
-</ul>
-</p>
-        </div>
-            <h4>O SOIT</h4>
-            <p>SOIT je združenie dobrovoľníkov, vývojárov a užívateľov otvorených technológií,
-            pedagógov, výskumníkov, či špecialistov na informačnú bezpečnosť.
-            Sme presvedčení, že otvorenosť v technológiach pomáha zlepšovať kvalitu
-            vzdelávania, napomáha technologickému pokroku a je predpokladom k dobre
-            fungujúcej občianskej spoločnosti.</p>
-    </div>
-
-
-    <div class="w3-container w3-light-white w3-border-top w3-small oss-grey">
-        <p>© Spoločnosť pre otvorené informačné technológie</p>
-    </div>
-</div>
-
-</body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+		<title>OSS víkend | CFP</title>
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="oss.css">
+		<script type="text/javascript" src="lib/w3.js"></script>
+	</head>
+	<body>
+		<div w3-include-html="oss_nav.html"></div> 
+		<script type="text/javascript">
+			w3.includeHTML();
+		</script>
+		<div w3-include-html="oss_title.html"></div> 
+		<script type="text/javascript">
+			w3.includeHTML();
+		</script>
+		<div class="oss-main">
+    		<div class="w3-content">
+        		<h2>Prihlasovanie prednášok</h2>
+        		<p>Všetky prednášky a workshopy z oblasti otvorených technológií sú vítané. Hľadáme najmä:</p>
+        		<ul>
+        			<li>Prednášky od členov tímov OSS projektov, prispievateľov do projektov alebo iných ľudí, ktorí sa priamo zúčastňujú na vývoji a použití otvorených technológií.</li>
+        			<li>Praktické prednášky (tutoriály) o používaní otvorených technológií.</li>
+        			<li>Akékoľvek iné prednášky, ktoré sa týkajú otvoreného softvéru, otvoreného hardvéru, otvorených dát, otvorených štandardov, otvoreného vzdelávania, verejných licencií.</li>
+        		</ul>
+        		<p>Prihlásené prednášky: <a href="abstracts.html">abstrakty</a></p>
+        		<p>Návrhy na prednášky posielajte do <strong>07.10.2018</strong> na adresu <strong>ossvikend {kysla-rybicka} soit.sk</strong>, uveďte:</p>
+        		<ul>
+        			<li><strong>meno</strong></li>
+        			<li><strong>názov prednášky/workshopu</strong></li>
+        			<li><strong>krátky abstrakt (3-4 vety)</strong></li>
+        			<li><strong>dĺžka trvania prednášky: 30 min / 60 min</strong></li>
+        			<li><strong>preferovaný deň (sobota, nedeľa) a čas</strong></li>
+        			<li><strong>veľkosť trička</strong></li>
+        			<li><strong>záujem o zabezpečenie ubytovania (z piatka na sobotu / zo soboty na nedeľu)</strong></li>
+        		</ul>
+        		<p>Nepovinne:</p>
+        		<ul>
+        			<li><strong>v prípade workshopu požiadavky na účastníkov</strong></li>
+        			<!--<li><strong>fotografia</strong> (pre stránku o prednášajúcich)</li>-->
+        			<!--<li><strong>krátky životopis </strong>(pre stránku o prednášajúcich)</li>-->
+        		</ul>
+        		<h4>O SOIT</h4>
+        		<p>SOIT je združenie dobrovoľníkov, vývojárov a užívateľov otvorených technológií, pedagógov, výskumníkov, či špecialistov na informačnú bezpečnosť. Sme presvedčení, že otvorenosť v technológiach pomáha zlepšovať kvalitu vzdelávania, napomáha technologickému pokroku a je predpokladom k dobre fungujúcej občianskej spoločnosti.</p>
+        	</div>
+        	<div class="w3-container w3-light-white w3-border-top w3-small oss-grey">
+        		<p>© Spoločnosť pre otvorené informačné technológie</p>
+    		</div>
+		</div>
+	</body>
 </html>
