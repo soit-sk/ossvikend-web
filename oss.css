@@ -38,6 +38,9 @@ td, th {
     border: 0px solid black;
 }
 
+.line1 { background-color: rgb(127,127,127);}
+.line2 { background-color: rgb(200,200,200);}
+
 @media only screen and (max-width: 1000px) {
 
 	.oss-jumbo {
