@@ -21,7 +21,7 @@
             		<p class="w3-large">
             			Pravidelné stretnutie priaznivcov otvorených technológií. Otvorený hardvér, otvorený/slobodný softvér, otvorené dáta, verejné licencie, otvorené vzdelávanie, otvorené vládnutie.
             		</p>
-            		<p class="w3-xlarge">20.10.2018 – 21.10.2018, Prírodovedecká fakulta UPJŠ Košice, Jesenná 5</p>
+            		<p class="w3-xlarge">20.10.2018 – 21.10.2018, Prírodovedecká fakulta UPJŠ Košice, Jesenná 5<br />začiatok 09:00</p>
             		<!--<p class="w3-xlarge">21.04.2018, FIIT STU Bratislava, <a href="https://www.opencamp.sk">www.opencamp.sk</a></p>-->
         		</div>
     		</div>
@@ -30,7 +30,7 @@
             		<div class="w3-card-4 w3-padding-xlarge">
             			<!--<h4>OSS víkend 2018 Košice sa pripravuje</h4>-->
             			<h4><a target="_blank" href="cfp.html">Prihlasovanie prednášok</a></h4>
-            			<!--<h4><a target="_blank" href="schedule.html" style="color:red">Program</a></h4>-->
+            			<h4><a target="_blank" href="schedule.html" style="color:red">Program</a></h4>
             			<a href="lpd.html">Linux Presentation Day Slovakia 2018</a><br />
             			<a href="lpi.html">LPI certification paper exam</a><br />
             			<a href="http://codeweek.eu/">EU Code Week 2018</a><br />
@@ -40,17 +40,17 @@
         		</div>
 				<div class="w3-third">
             		<div class="w3-card-4 w3-padding-xlarge">
-            			<h4>Vstup voľný</h4>
-            			Vítaný je každý.<br />
-            			Vstup je voľný a registrácia nie je potrebná.<br>
-	    				<!--Pomôžte nám s propagáciou na <a target="_blank" href="https://www.facebook.com/events/318823905205001">Facebooku</a>, <a href="https://twitter.com/hashtag/ossvikend?f=tweets">Twitteri</a>, alebo inde. Vytlačte a zaveste náš <a target="_blank" href="PlagatHD2017.pdf">plagát</a>.-->
+            			<h4>Mapa</h4>
+            			<!--Pomôžte nám s propagáciou na <a target="_blank" href="https://www.facebook.com/events/318823905205001">Facebooku</a>, <a href="https://twitter.com/hashtag/ossvikend?f=tweets">Twitteri</a>, alebo inde. Vytlačte a zaveste náš <a target="_blank" href="PlagatHD2017.pdf">plagát</a>.-->
 	    				<!--Streamovanie začímame v sobotu o 9:30 - <a href="https://www.youtube.com/watch?v=aLgD6pRgI6E"> miestnosť F1</a>, <a href="https://www.youtube.com/watch?v=KQ_Kyjcm2hk">miestnosť F2</a>. Nestreamujeme: stánky, káva, atmosféra,...-->
 	    				<!--Streamovanie začímame v nedeľu o 9:30 - <a href="https://www.youtube.com/watch?v=13jqc97hnxU"> miestnosť F1</a>, <a href="https://www.youtube.com/watch?v=wReEsS_eCRQ">miestnosť F2</a>. Nestreamujeme: stánky, káva, atmosféra,...-->
+	    				 <div id="map" style="height:200px"></div>
 					</div>
 				</div>
 				<div class="w3-third">
             		<div class="w3-card-4 w3-padding-xlarge">
            				<h4>O konferencii</h4>
+           				<p>Vstup voľný, bez registrácie.</p>
             			<p>OSS víkend je najväčším komunitným stretnutím vývojárov a používateľov otvorených technológií na Slovensku.
             			<!--p>OSS Víkend je najväčším stretnutím vývojárov a používateľov otvorených technológií na Slovensku.
             			Jeho zameraním je použitie otvorených technológií vo všetých oblastiach: vývoji softvéru,
@@ -63,5 +63,19 @@
         		<p>&copy; Spoločnosť pre otvorené informačné technológie</p>
     		</div>
 		</div>
+		<script src="http://openlayers.org/api/OpenLayers.js"></script>
+		<script>
+			map = new OpenLayers.Map("map");
+			map.addLayer(new OpenLayers.Layer.OSM());
+			var lonLat = new OpenLayers.LonLat(21.24813,48.72891).transform(
+				new OpenLayers.Projection("EPSG:4326"),	// transform from WGS 1984
+				map.getProjectionObject()		// to Spherical Mercator Projection
+			);
+			var zoom=15;
+			var markers = new OpenLayers.Layer.Markers( "Markers" );
+			map.addLayer(markers);
+			markers.addMarker(new OpenLayers.Marker(lonLat));
+			map.setCenter (lonLat, zoom);
+		</script>
 	</body>
 </html>
